@@ -1,0 +1,15 @@
+[package]
+name = "rusanta-ml"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+description = "Machine learning algorithms."
+
+[dependencies]
+rusanta-core = { path = "../rusanta-core" }
+rusanta-array = { path = "../rusanta-array" }
+rusanta-frame = { path = "../rusanta-frame" }
+
+rand.workspace = true
