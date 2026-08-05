@@ -1,0 +1,27 @@
+[package]
+name = "rusanta-triton"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+description = "GPU compiler and execution backend."
+
+[features]
+default = ["wgpu-backend"]
+
+wgpu-backend = [
+    "dep:wgpu",
+    "dep:bytemuck"
+]
+
+cuda-backend = [
+    "dep:cudarc"
+]
+
+[dependencies]
+rusanta-core = { path = "../rusanta-core" }
+
+wgpu = { version = "0.19", optional = true }
+bytemuck = { version = "1.14", features = ["derive"], optional = true }
+cudarc = { version = "0.11", optional = true }
