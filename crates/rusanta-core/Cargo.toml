@@ -1,0 +1,11 @@
+[package]
+name = "rusanta-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+description = "Core traits, errors and utilities for Rusanta."
+
+[dependencies]
+serde.workspace = true
