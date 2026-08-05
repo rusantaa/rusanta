@@ -1,0 +1,15 @@
+[package]
+name = "rusanta-frame"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+description = "DataFrame implementation."
+
+[dependencies]
+rusanta-core = { path = "../rusanta-core" }
+rusanta-array = { path = "../rusanta-array" }
+
+serde.workspace = true
+serde_json.workspace = true
