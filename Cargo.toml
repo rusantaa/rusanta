@@ -5,6 +5,7 @@ members = [
     "crates/rusanta-array",
     "crates/rusanta-core",
     "crates/rusanta-frame",
+    "crates/rusanta-tensor",
     "crates/rusanta-viz",
     "crates/rusanta-stat-viz",
     "crates/rusanta-ml",
