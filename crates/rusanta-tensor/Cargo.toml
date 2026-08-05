@@ -1,0 +1,16 @@
+[package]
+name = "rusanta-tensor"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+description = "Tensor library with automatic differentiation."
+
+[dependencies]
+rusanta-core = { path = "../rusanta-core" }
+rusanta-array = { path = "../rusanta-array" }
+rusanta-triton = { path = "../rusanta-triton" }
+
+serde.workspace = true
+rand.workspace = true
