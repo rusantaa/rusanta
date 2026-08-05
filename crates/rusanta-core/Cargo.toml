@@ -1,11 +1,60 @@
 [package]
 name = "rusanta-core"
-version.workspace = true
-edition.workspace = true
-license.workspace = true
-authors.workspace = true
 
-description = "Core traits, errors and utilities for Rusanta."
+version = "0.1.0"
+
+edition = "2024"
+
+authors = [
+    "Rusanta Contributors"
+]
+
+description = """
+Core infrastructure crate for the Rusanta scientific computing ecosystem.
+Provides shared traits, errors, utilities, and backend abstractions.
+"""
+
+license = "MIT OR Apache-2.0"
+
+repository = "https://github.com/rusantaa/rusanta"
+
+homepage = "https://github.com/rusantaa/rusanta"
+
+documentation = "https://docs.rs/rusanta-core"
+
+
+keywords = [
+    "scientific-computing",
+    "machine-learning",
+    "tensor",
+    "rust",
+    "ai"
+]
+
+
+categories = [
+    "science",
+    "mathematics",
+    "algorithms"
+]
+
+readme = "../../README.md"
+
+
+
+
 
 [dependencies]
-serde.workspace = true
+
+
+thiserror = "2.0"
+
+serde = {
+    version = "1.0",
+    features = [
+        "derive"
+    ]
+}
+
+
+log = "0.4"
