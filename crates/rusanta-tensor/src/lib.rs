@@ -1,27 +1,23 @@
-// rusanta-tensor/src/lib.rs
-
 //! Rusanta Tensor Engine.
 //!
-//! Provides:
+//! Core tensor computation library.
 //!
-//! - Tensor computation
+//! Features:
+//!
+//! - Multi-dimensional tensors
 //! - Automatic differentiation
-//! - CPU/GPU devices
+//! - CPU/GPU abstraction
 //! - Neural network operations
 //! - Optimization algorithms
 
 
 pub mod tensor;
 
-
 pub mod device;
-
 
 pub mod autograd;
 
-
 pub mod ops;
-
 
 pub mod optim;
 
@@ -32,9 +28,8 @@ pub mod optim;
 
 
 // =====================================================
-// Public Tensor API
+// Tensor exports
 // =====================================================
-
 
 
 pub use tensor::{
@@ -51,9 +46,8 @@ pub use tensor::{
 
 
 // =====================================================
-// Device API
+// Device exports
 // =====================================================
-
 
 
 pub use device::Device;
@@ -65,26 +59,8 @@ pub use device::Device;
 
 
 // =====================================================
-// Autograd API
+// Optimizer exports
 // =====================================================
-
-
-
-pub use autograd::{
-    backward,
-    Node,
-};
-
-
-
-
-
-
-
-// =====================================================
-// Optimization API
-// =====================================================
-
 
 
 pub use optim::{
@@ -93,14 +69,20 @@ pub use optim::{
 };
 
 
-pub use optim::{
-    SGD,
-    MomentumSGD,
-    Adam,
-    AdamW,
-    RMSProp,
-    AdaGrad,
-};
+
+
+
+pub use optim::sgd::SGD;
+
+pub use optim::momentum::MomentumSGD;
+
+pub use optim::adam::Adam;
+
+pub use optim::adamw::AdamW;
+
+pub use optim::rmsprop::RMSProp;
+
+pub use optim::adagrad::AdaGrad;
 
 
 
@@ -109,9 +91,8 @@ pub use optim::{
 
 
 // =====================================================
-// Operation API
+// Operation namespaces
 // =====================================================
-
 
 
 pub use ops::{
