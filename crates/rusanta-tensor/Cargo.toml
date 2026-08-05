@@ -7,10 +7,95 @@ authors.workspace = true
 
 description = "Tensor library with automatic differentiation."
 
+[features]
+
+default = [
+    "cpu"
+]
+
+
+cpu = []
+
+
+gpu = [
+    "dep:wgpu",
+    "dep:bytemuck"
+]
+
+
+cuda = [
+    "dep:cudarc"
+]
+
+
+
+
+
+
+
 [dependencies]
-rusanta-core = { path = "../rusanta-core" }
+
+rusanta-core = {
+    path = "../rusanta-core"
+}
+
 rusanta-array = { path = "../rusanta-array" }
 rusanta-triton = { path = "../rusanta-triton" }
 
+
+# GPU backend
+
+wgpu = {
+    version = "0.19",
+    optional = true
+}
+
+
+bytemuck = {
+    version = "1.14",
+    features = [
+        "derive"
+    ],
+    optional = true
+}
+
+
+
+# NVIDIA CUDA backend
+
+cudarc = {
+    version = "0.11",
+    optional = true
+}
+
+
+
+
+
+[dev-dependencies]
+
+criterion = "0.5"
+
+
+rand = "0.8"
+
+
+approx = "0.5"
+
+
+
+
+
+
+[[bench]]
+
+name = "tensor_bench"
+
+
+
+
+
 serde.workspace = true
 rand.workspace = true
+
+harness = false
