@@ -1,0 +1,12 @@
+[package]
+name = "rusanta-viz"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+description = "General plotting library."
+
+[dependencies]
+rusanta-core = { path = "../rusanta-core" }
+rusanta-array = { path = "../rusanta-array" }
